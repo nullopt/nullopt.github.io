@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P6 Clones Timing - Alt1 Plugin</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>P6 Clones Timing</h1>
+      </header>
+
+      <main>
+        <div id="status">
+          <p id="alt1-status">Checking Alt1 status...</p>
+        </div>
+
+        <div id="settings">
+          <label class="toggle-label">
+            <input type="checkbox" id="use-ticks" checked />
+            <span>Show ticks (0.6s intervals)</span>
+          </label>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="show-image" checked />
+            <span>Show image</span>
+          </label>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="show-progress-bar" checked />
+            <span>Show progress bar</span>
+          </label>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="debug-mode" />
+            <span>Debug console</span>
+          </label>
+        </div>
+
+        <div id="output" class="hidden">
+          <!-- debug output will appear here -->
+        </div>
+      </main>
+
+      <footer>
+        <p>Detects P6 clone spawn and shows countdown timer</p>
+      </footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

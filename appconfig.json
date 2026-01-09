@@ -1,0 +1,17 @@
+{
+    "appName": "P6 Clones Timing",
+    "description": "Alt1 plugin for RuneScape 3",
+    "appUrl": "./index.html",
+    "version": "1.0.0",
+    "configUrl": "./appconfig.json",
+    "iconUrl": "./icon.png",
+    "defaultWidth": 290,
+    "defaultHeight": 430,
+    "minWidth": 40,
+    "minHeight": 40,
+    "maxWidth": 1000,
+    "maxHeight": 1000,
+    "requestHandlers": [],
+    "activators": [],
+    "permissions": "pixel,gamestate,overlay"
+}
