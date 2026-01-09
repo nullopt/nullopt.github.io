@@ -4,8 +4,8 @@ An Alt1 plugin for RuneScape 3 that detects the P6 clone spawn message and displ
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/4c166dad-f85c-4fc7-b4ee-101d47ffc446" alt="img1" width="500"></td>
-    <td><img src="https://github.com/user-attachments/assets/498dfa43-7f6b-4c45-8c69-fe17a5cb4f21" alt="img2" width="500"></td>
+    <td><img src="https://github.com/user-attachments/assets/4c166dad-f85c-4fc7-b4ee-101d47ffc446" alt="img1" width="400"></td>
+    <td><img src="https://github.com/user-attachments/assets/498dfa43-7f6b-4c45-8c69-fe17a5cb4f21" alt="img2" width="400"></td>
   </tr>
 </table>
 
