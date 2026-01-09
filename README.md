@@ -12,7 +12,7 @@ alt1://addapp/https://nullopt.github.io/appconfig.json
 
 Or manually add in Alt1:
 1. Open Alt1's browser (globe icon)
-2. Navigate to `https://nullopt.github.io/appconfig.json`
+2. Navigate to `https://nullopt.github.io`
 3. Click "Add App"
 
 ## Features
@@ -62,4 +62,3 @@ This plugin requires:
 ## Resources
 
 - [Alt1 Toolkit](https://runeapps.org/alt1)
-- [GitHub Repository](https://github.com/nullopt/P6ClonesTiming)
