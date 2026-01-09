@@ -2,6 +2,8 @@
 
 An Alt1 plugin for RuneScape 3 that detects the P6 clone spawn message and displays an overlay timer to help you execute your rotation.
 
+![Demo](https://cdn.discordapp.com/attachments/1164217825880186980/1459086475848192207/rs2client_3cWTgDmSfk.gif)
+
 ## Installation
 
 Click the link below or paste it into your browser:
