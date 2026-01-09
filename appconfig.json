@@ -1,6 +1,6 @@
 {
     "appName": "P6 Clones Timing",
-    "description": "Alt1 plugin for RuneScape 3",
+    "description": "Shows ability timing for P6 clones",
     "appUrl": "./index.html",
     "version": "1.0.0",
     "configUrl": "./appconfig.json",
