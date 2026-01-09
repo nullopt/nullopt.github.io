@@ -1,118 +1,65 @@
-# P6 Clones Timing - Alt1 Plugin
+# P6 Clones Timing
 
-A RuneScape 3 Alt1 plugin boilerplate built with TypeScript and Webpack.
-
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [Alt1 Toolkit](https://runeapps.org/alt1) installed
+An Alt1 plugin for RuneScape 3 that detects the P6 clone spawn message and displays an overlay timer to help you execute your rotation.
 
 ## Installation
 
-`alt1://addapp/https://nullopt.github.io/appconfig.json`
-
-```bash
-npm install
-```
-
-## Development
-
-### Build for production
-```bash
-npm run build
-```
-
-
-### Watch mode (auto-rebuild on changes)
-```bash
-npm run watch
-```
-
-### Development server with hot reload
-```bash
-npm run dev
-```
-
-`alt1://addapp/http://localhost:8080/appconfig.json`
-
-## Adding to Alt1
-
-1. Build the project: `npm run build`
-2. Host the `dist/` folder on a web server (local or remote)
-3. In Alt1, open the browser and navigate to your hosted URL
-4. Alt1 will detect the `appconfig.json` and offer to add the app
-
-### Local Development
-
-For local development, you can use the webpack dev server:
-
-```bash
-npm run dev
-```
-
-Then add `http://localhost:8080` to Alt1.
-
-## Project Structure
+Click the link below or paste it into your browser:
 
 ```
-├── src/
-│   ├── index.ts          # main plugin entry point
-│   ├── index.html        # HTML template
-│   ├── style.css         # plugin styles
-│   └── appconfig.json    # Alt1 app configuration
-├── dist/                 # build output (generated)
-├── package.json
-├── tsconfig.json
-└── webpack.config.js
+alt1://addapp/https://nullopt.github.io/P6ClonesTiming/appconfig.json
 ```
 
-## Alt1 API Usage
+Or manually add in Alt1:
+1. Open Alt1's browser (globe icon)
+2. Navigate to `https://nullopt.github.io/P6ClonesTiming/appconfig.json`
+3. Click "Add App"
 
-The plugin uses the `alt1/base` module for screen capture and image detection:
+## Features
 
-```typescript
-import * as a1lib from "alt1/base";
+### Combat Styles
 
-// check if Alt1 is available
-if (a1lib.hasAlt1) {
-  // capture the game screen
-  const img = a1lib.captureHoldFullRs();
-  
-  // convert to ImageData for processing
-  const imageData = img.toData();
-}
-```
+**Magic Mode**
+- Single 6-second countdown timer
+- Shows when to use your next ability after clones spawn
 
-## Available Alt1 Modules
+**Necro Mode**  
+- Sequential ability rotation with individual timers:
+  - Invoke Death (2.4s)
+  - Threads of Fate (1.8s)
+  - Bloat (1.8s)
+  - Volley of Souls (1.8s)
+  - T90 Spec + EOF (1.8s)
 
-- `alt1/base` - Core functionality, screen capture, image detection
-- `alt1/ocr` - Text recognition
-- `alt1/chatbox` - Chatbox reading
-- `alt1/buffs` - Buff bar detection
-- `alt1/tooltip` - Tooltip reading
+### Settings
 
-## Configuration
+- **Combat Style** - Switch between Magic and Necro rotations
+- **Show ticks** - Display time in 0.6s tick intervals instead of whole seconds
+- **Show image** - Toggle ability icons in the overlay
+- **Show progress bar** - Toggle the countdown progress bar
+- **Debug console** - Show detailed logs for troubleshooting
 
-Edit `src/appconfig.json` to customize your app:
+All settings are saved automatically.
 
-```json
-{
-  "appName": "Your App Name",
-  "description": "Your app description",
-  "appUrl": "index.html",
-  "configUrl": "appconfig.json",
-  "permissions": ["pixel", "overlay"]
-}
-```
+## How It Works
 
-### Permissions
+1. The plugin reads your chatbox for the trigger phrase
+2. When "I WILL NOT BE SUBJUGATED BY A MORTAL!" appears, the timer starts
+3. Follow the overlay countdown to execute your rotation
 
-- `pixel` - Required for screen capture
-- `overlay` - Required for drawing overlays on the game
+## Requirements
+
+- [Alt1 Toolkit](https://runeapps.org/alt1)
+- RuneScape 3 in compatibility mode or windowed
+
+## Permissions
+
+This plugin requires:
+- **Pixel** - To read the chatbox
+- **Overlay** - To display the timer on screen
+- **Game State** - To detect game window position
 
 ## Resources
 
-- [Alt1 GitHub](https://github.com/skillbert/alt1)
-- [Alt1 Minimal Example](https://github.com/skillbert/alt1minimal)
-- [RuneApps](https://runeapps.org/)
-
+- [Alt1 Toolkit](https://runeapps.org/alt1)
+- [GitHub Repository](https://github.com/nullopt/P6ClonesTiming)
