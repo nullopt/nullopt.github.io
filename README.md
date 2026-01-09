@@ -7,12 +7,12 @@ An Alt1 plugin for RuneScape 3 that detects the P6 clone spawn message and displ
 Click the link below or paste it into your browser:
 
 ```
-alt1://addapp/https://nullopt.github.io/P6ClonesTiming/appconfig.json
+alt1://addapp/https://nullopt.github.io/appconfig.json
 ```
 
 Or manually add in Alt1:
 1. Open Alt1's browser (globe icon)
-2. Navigate to `https://nullopt.github.io/P6ClonesTiming/appconfig.json`
+2. Navigate to `https://nullopt.github.io/appconfig.json`
 3. Click "Add App"
 
 ## Features
