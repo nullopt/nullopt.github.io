@@ -8,51 +8,88 @@
   </head>
   <body>
     <div id="app">
+      <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading settings...</p>
+      </div>
+
       <header>
-        <h1>P6 Clones Timing</h1>
+        <h1>
+          <img src="icon.png" alt="" class="header-icon" />
+          P6 Clones Timing
+          <img src="threads.png" alt="" class="header-icon" />
+        </h1>
       </header>
 
       <main>
-        <div id="status">
-          <p id="alt1-status">Checking Alt1 status...</p>
-        </div>
+        <h2 class="section-header">Settings</h2>
 
         <div id="settings">
-          <div class="setting-group">
-            <span class="setting-label">Combat Style</span>
-            <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="combat-style" value="magic" checked />
-                <span>Magic</span>
+          <div class="settings-columns">
+            <div class="settings-column">
+              <div class="setting-group">
+                <span class="setting-label">Combat Style</span>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="combat-style" value="magic" checked />
+                    <span>Magic</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="combat-style" value="necro" />
+                    <span>Necro</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="setting-divider"></div>
+
+              <label class="toggle-label">
+                <input type="checkbox" id="use-ticks" checked />
+                <span>Show ticks (0.6s intervals)</span>
               </label>
-              <label class="radio-label">
-                <input type="radio" name="combat-style" value="necro" />
-                <span>Necro</span>
+
+              <label class="toggle-label">
+                <input type="checkbox" id="show-image" checked />
+                <span>Show image</span>
+              </label>
+
+              <label class="toggle-label">
+                <input type="checkbox" id="show-progress-bar" checked />
+                <span>Show progress bar</span>
+              </label>
+
+              <label class="toggle-label">
+                <input type="checkbox" id="compensate-ping" />
+                <span>Compensate for ping</span>
+              </label>
+
+              <label class="toggle-label">
+                <input type="checkbox" id="debug-mode" />
+                <span>Debug console</span>
               </label>
             </div>
+
+            <div class="settings-column">
+              <div class="setting-group">
+                <span class="setting-label">X Offset: <span id="offset-x-value">0</span></span>
+                <input type="range" id="overlay-offset-x" min="0" max="1920" value="0" step="10" class="slider" />
+              </div>
+
+              <div class="setting-group">
+                <span class="setting-label">Y Offset: <span id="offset-y-value">0</span></span>
+                <input type="range" id="overlay-offset-y" min="0" max="1080" value="0" step="10" class="slider" />
+              </div>
+
+              <div class="setting-group">
+                <span class="setting-label">Overlay Scale: <span id="scale-value">100%</span></span>
+                <input type="range" id="overlay-scale" min="50" max="130" value="100" step="10" class="slider" />
+              </div>
+
+              <button id="show-overlay-position" type="button" class="debug-button">
+                Show Overlay Position
+              </button>
+            </div>
           </div>
-
-          <div class="setting-divider"></div>
-
-          <label class="toggle-label">
-            <input type="checkbox" id="use-ticks" checked />
-            <span>Show ticks (0.6s intervals)</span>
-          </label>
-
-          <label class="toggle-label">
-            <input type="checkbox" id="show-image" checked />
-            <span>Show image</span>
-          </label>
-
-          <label class="toggle-label">
-            <input type="checkbox" id="show-progress-bar" checked />
-            <span>Show progress bar</span>
-          </label>
-
-          <label class="toggle-label">
-            <input type="checkbox" id="debug-mode" />
-            <span>Debug console</span>
-          </label>
         </div>
 
         <div id="output" class="hidden">
@@ -61,7 +98,7 @@
       </main>
 
       <footer>
-        <p>Detects P6 clone spawn and shows countdown timer</p>
+        <p>Detects P6 clone spawn and shows a countdown timer with a rotation.</p>
       </footer>
     </div>
     <script src="main.js"></script>
